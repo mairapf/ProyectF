@@ -33,18 +33,18 @@ function getVarsUrl(){
 
 function initMap() {
   var mv= getVarsUrl();
-  var centro = new google.maps.LatLng(mv.latitud ,-79.8404632);
+  var centro = new google.maps.LatLng(-6.77471 ,-79.8404632);
   
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
-    center: {centro}
+    center: {lat: -6.77471 , lng: -79.8404632}
   });
 
   marker = new google.maps.Marker({
     map: map,
     draggable: true,
     animation: google.maps.Animation.DROP,
-    position: {lat: 6.5658545 , lng: -79.8404632}
+    position: {lat: -6.77471 , lng: -79.8404632}
   });
   marker.addListener('click', toggleBounce);
 }
